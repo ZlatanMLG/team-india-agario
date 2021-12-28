@@ -2,5 +2,5 @@
 
 Сервер запускаємо нодою:
 
-  node server.js
+    node server.js
 
