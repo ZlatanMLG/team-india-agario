@@ -13,3 +13,10 @@ git clone https://github.com/ZlatanMLG/team-india-agario.git
 
 ```node server.js```
 
+## Скріншоти виконання
+
+![](/images/screenshots/Screenshot_1.png)
+
+![](/images/screenshots/Screenshot_2.png)
+
+![](/images/screenshots/Screenshot_3.png)
