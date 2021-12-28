@@ -1,0 +1,217 @@
+
+.absolute-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+} .fog {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    z-index: 200;
+    }
+    .fog__container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+} .fog__img {
+    position: absolute;
+    height: 100vh;
+    width: 300vw;
+    }
+    .fog__img--first {
+    background: url("fog-1.png") repeat-x;
+    background-size: contain;
+    background-position: center;
+    -webkit-animation: marquee 60s linear infinite;
+    animation: marquee 60s linear infinite;
+    }
+    .fog__img--second {
+    background: url("fog-2.png") repeat-x;
+    background-size: contain;
+    background-position: center;
+    -webkit-animation: marquee 40s linear infinite;
+    animation: marquee 40s linear infinite;
+    }
+     
+    @-webkit-keyframes marquee {
+    0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    }
+    100% {
+    -webkit-transform: translate3d(-200vw, 0, 0);
+    transform: translate3d(-200vw, 0, 0);
+    }
+    }
+     
+    @keyframes marquee {
+    0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    }
+    100% {
+    -webkit-transform: translate3d(-200vw, 0, 0);
+    transform: translate3d(-200vw, 0, 0);
+    }
+}
+
+
+html { overflow:  hidden; }
+
+body {
+    margin: 0;
+}
+
+
+#player_name {
+    color: #e0e0e0;
+    top: 5px;
+    margin-left: 20px;
+    font-size: 25px;
+    font-family: 'Antic Slab', serif;
+    /* transform: translate(-50%, -50%); */
+    display: none;
+}
+
+#game_over {
+    color: #e53935;
+    top: 100px;
+    left: 10%;
+    font-size: 30px;
+    font-family: 'Antic Slab', serif;
+    transform: translate(-50%, -50%);
+}
+
+#score {
+    color: #e0e0e0;
+    top: 100px;
+    left: 10%;
+    font-size: 30px;
+    font-family: 'Antic Slab', serif;
+    transform: translate(-50%, -50%);
+}
+
+#fps {
+    position: fixed;
+    color: #33ff00;
+    -webkit-text-stroke: 1px #156900;
+    top: 96.5%;
+    left: 6%;
+    font-size: 15px;
+    z-index: 201;
+    font-family: 'Antic Slab', serif;
+    transform: translate(-50%, -50%);
+}
+
+#room_info {
+    position: fixed;
+    color: #00a1ff;
+    bottom: -36px;
+    left: 49%;
+    font-size: 25px;
+    z-index: 201; 
+    font-family: monospace;
+    transform: translate(-50%, -50%);
+}
+
+.bg_text {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 201; 
+    width: 100%; 
+    height: 100%;
+}
+
+.b2 {
+    top: 60%;
+    left: 56%;
+    width: 15%;
+    transform: translate(-50%, -50%);
+} .b3 {
+    top: 51.5%;
+    left: 40%;
+    width: 15%;
+    transform: translate(-50%, -50%);
+} #set_name {
+    top: 39%;
+    left: 50%;
+    width: 15%;
+    color: #ffc700;
+    transform: translate(-50%, -50%);
+}
+#start_game {
+    top: 50%;
+    left: 50%;
+    width: 15%;
+    transform: translate(-50%, -50%);
+}  
+#server_indicator {
+    position: fixed;
+    color: #ff0000;
+    font: 2em Arial, sans-serif;
+    text-shadow: black 0 2px 2px;
+    bottom: 0px;
+    left: 49%;
+    font-size: 20px;
+    z-index: 201; 
+    font-family: 'Antic Slab', serif;
+    transform: translate(-50%, -50%);
+}
+
+
+.select-class-div {
+    width: 15%;
+    height: 25%;
+    overflow-y: auto;
+}
+
+.select-class-div a {
+  background-color: #eee; /* Grey background color */
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.select-class-div a:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.select-class-div a.active {
+  background-color: #4CAF50; /* Add a green color to the "active/current" link */
+  color: white;
+}
+
+.b, .b2, #score, #game_over, #player_name, #set_name, .select-class-div, #server_indicator {
+    z-index: 203; position: fixed;
+    webkit-transition: 5s;
+    -o-transition: 5s;
+    transition: 5s;
+}
+
+html {
+    z-index: 202;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(233, 30, 99, 0) 0%, rgba(255, 255, 255) 5%, rgba(0, 0, 0, 0.9) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255)), color-stop(5%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.9))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(233, 30, 99, 0) 0%, rgba(255, 255, 255) 5%, rgba(0, 0, 0, 0.9) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(233, 30, 99, 0) 0%, rgba(255, 255, 255) 5%, rgba(0, 0, 0, 0.9) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(233, 30, 99, 0) 0%, rgba(255, 255, 255) 5%, rgba(0, 0, 0, 0.9) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, rgba(233, 30, 99, 0) 0%, rgb(255, 255, 255) 5%, rgb(0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#00000000', endColorstr = '#e6000000', GradientType = 1); /* IE6-9 fallback on horizontal gradient */
+
+}
